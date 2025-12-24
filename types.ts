@@ -1,8 +1,17 @@
+export type Language = "pt" | "en" | "es";
 
 export interface Message {
   id: number;
   text: string;
-  category: 'motivation' | 'spiritual' | 'gratitude';
+  category: "motivation" | "spiritual" | "gratitude";
+}
+
+export interface TranslatedMessage extends Message {
+  translations: {
+    pt: string;
+    en: string;
+    es: string;
+  };
 }
 
 export interface SnowParticle {
