@@ -200,7 +200,7 @@ const App: React.FC = () => {
           Que a luz do nascimento de Jesus brilhe em sua vida hoje e sempre.
         </p>
         <div className="flex items-center justify-center gap-2 text-white/40 text-xs">
-          <span>&copy; 2024 Natal de Luz</span>
+          <span>&copy; {new Date().getFullYear()} Natal de Luz</span>
           <span>•</span>
           <a
             href="#"
