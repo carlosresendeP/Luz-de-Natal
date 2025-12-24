@@ -1,59 +1,61 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luz de Natal: Pequenas Pílulas de Esperança</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luz de Natal - Inspiração</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+        overflow-x: hidden;
+        background: #013220; /* Verde Pinheiro Profundo */
+      }
+      .font-handwriting {
+        font-family: 'Mountains of Christmas', cursive;
+      }
+      .font-sans {
+        font-family: 'Inter', sans-serif;
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+      }
+      .snow-canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        z-index: 10;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
 </head>
-<body>
-    <div id="snowContainer"></div>
-
-    <div class="container">
-        <header>
-            <h1 class="handwriting">Luz de Natal</h1>
-            <p class="subtitle handwriting">Pequenas Pílulas de Esperança</p>
-        </header>
-
-        <main>
-            <div class="glass-card">
-                <div id="messageDisplay">
-                    <p class="message-fade">
-                        Clique no botão abaixo para receber uma mensagem de esperança neste Natal ✨
-                    </p>
-                </div>
-            </div>
-
-            <button id="generateBtn" class="btn-present handwriting">
-                🎁 Abrir Presente
-            </button>
-
-            <div class="button-group">
-                <button id="copyBtn" class="icon-button hidden">
-                    📋 Copiar Mensagem
-                </button>
-
-                <button id="muteBtn" class="icon-button">
-                    <span id="muteIcon">🔊</span> <span id="muteText">Som</span>
-                </button>
-            </div>
-
-            <div id="copyFeedback" class="copy-feedback hidden">
-                ✓ Mensagem copiada!
-            </div>
-        </main>
-
-        <footer>
-            <p>Que a magia do Natal ilumine seu coração e renove suas esperanças! 🌟</p>
-            <p>
-                <a href="#">Compartilhe a luz com quem você ama</a>
-            </p>
-        </footer>
-    </div>
-
-    <script src="script.js"></script>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
 </body>
 </html>
